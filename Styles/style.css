@@ -61,13 +61,12 @@ nav a:hover {
 }
 
 /* === Home Page === */
-
-
 #Welcome_Message> h1 {
     grid-column: 1 / -1;
     justify-self: center;
     text-align: center;
 }
+
 .Featured_Projects {
     width: 90%;
     max-width: 1400px;
@@ -85,31 +84,13 @@ nav a:hover {
     text-align: center;
 }
 
-.Project1 img{
-    height: 500px;
-    width: 500px;
+.Project_one img{
+    height: 350px;
+    width: 350px;
     border: 5px solid #00d0f9;
     border-radius: 20px;
     box-shadow: 0 0 20px #22a203;
 }
-
-
-.Project2 img{
-    height: 500px;
-    width: 500px;
-    border: 5px solid #00d0f9;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #22a203;
-}
-
-.Project3 img{
-    height: 500px;
-    width: 500px;
-    border: 5px solid #00d0f9;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #22a203;
-}
-
 
 /* Make the H1 span all columns */
 .Featured_Projects > h1 {
