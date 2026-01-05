@@ -1,0 +1,131 @@
+body{
+    background: #22a203;
+}
+
+/*=== Fonts ===*/
+
+/* === Header === */
+header {
+    
+    height: 178px;
+    display: flex;
+    align-items: center;
+    padding: 0;          
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #f9cb00;
+    text-shadow: 9px 9px 15px #000;
+    padding-left: 90px;
+}
+
+header img{
+   display: block;
+    width: 180px;
+    height: 178px;       
+    padding: auto;
+}
+/* === Navigation === */
+nav {
+    background: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 50px;
+    border-top: 3px solid #00d0f9;
+    border-bottom: 5px solid #00d0f9;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    text-shadow: 0px 0px 3px #22a203;
+    transition: background 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-size: cover;
+    background-color: #00d0f9;
+    text-shadow: 4px 4px 2px #ff0000;
+}
+
+/* === Home Page === */
+
+
+#Welcome_Message> h1 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+}
+.Featured_Projects {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto;              
+    gap: 40px;
+}
+
+#Featured_Projects > h2 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+}
+
+.Project1 img{
+    height: 500px;
+    width: 500px;
+    border: 5px solid #00d0f9;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #22a203;
+}
+
+
+.Project2 img{
+    height: 500px;
+    width: 500px;
+    border: 5px solid #00d0f9;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #22a203;
+}
+
+.Project3 img{
+    height: 500px;
+    width: 500px;
+    border: 5px solid #00d0f9;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #22a203;
+}
+
+
+/* Make the H1 span all columns */
+.Featured_Projects > h1 {
+    grid-column: 1 / -1;
+}
+
+/* === FOOTER === */
+footer {
+    margin: 20px auto 0;
+    width: 90%; 
+    max-width: 900px; 
+    text-align: center;
+    padding: 15px;
+    border: 5px solid #f9cb00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffffff;
+    color: #f2c46e;
+    text-shadow: 1px 1px 3px #330033;
+}
