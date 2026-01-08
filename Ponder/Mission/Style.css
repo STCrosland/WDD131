@@ -2,31 +2,49 @@
 header h3{
     font-size: 3em;
     text-align: center;
+    font-family: serif;
 }
 
 header p{
     font-size: 1.2em;
     text-align: center;
     color:#035f9c;
+    border-bottom: 2px solid #b8b7b7;
+    margin: 5%;
+    font-family: serif;
 }
+
 /*=== Main Content ===*/
-#key_points p{
-    padding-left: 5%;
-}
-
 #Opening p{
-    padding: 30px;
-
+    padding-bottom: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #Middle p{
-    padding: 30px;
+    padding-bottom: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
-img{
-    width: 200px;
-    height: 300px;
+
+#key_points p{
+    padding-left: 25%;
+    padding-right: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
 /*=== FOOTER ===*/
 footer {
     background: #ffffff;
