@@ -59,6 +59,10 @@ footer {
     border: 5px solid #fcf80d;
     border-radius: 10px;
     box-shadow: 0 0 20px #ffffff;
-    color: #1354ed;
+    color: #035f9c;
     text-shadow: 1px 1px 3px #ffffff;
+}
+
+footer a{
+    padding: 10px;
 }

@@ -62,3 +62,7 @@ footer {
     color: #1354ed;
     text-shadow: 1px 1px 3px #ffffff;
 }
+
+footer a{
+    padding: 10px;
+}
