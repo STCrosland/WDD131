@@ -201,6 +201,17 @@ nav a:hover {
     box-shadow: 0 0 20px #22a203;
 }
 
+.mission-2{
+    text-align: center;
+
+}
+.mission-2 img{
+    height: 350px;
+    width: 350px;
+    border: 5px solid #f9cb00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #22a203;
+}
 /* === FOOTER === */
 footer {
     margin: 20px auto 0;
