@@ -23,7 +23,7 @@ para.classList.add('background');
 //document.querySelector('body').classList.add('background');
 
 const image = document.querySelector('img');
-image.setAttribute('src','images/Crosland_Sheild_logo.png')
+image.setAttribute('src','images/Crosland_Sheild_logo.jpeg')
 
 
 
