@@ -124,7 +124,7 @@ nav a:hover {
 
 
 /*=== Ponder Page ===*/
-.Ponder_Projects {
+.ponder-projects {
     width: 90%;
     max-width: 1400px;
     margin: 40px auto;
@@ -135,40 +135,27 @@ nav a:hover {
     gap: 40px;
 }
 
-.Ponder_Welcome > h1 {
+.ponder-welcome > h1 {
     grid-column: 1 / -1;
     justify-self: center;
     text-align: center;
 }
 
-.MetaTags_and_CSS_Reciew {
+.metatags-and_css-reciew {
     text-align: center;
 }
-
-.MetaTags_and_CSS_Reciew img{
+.metatags-and_css-reciew img{
     height: 350px;
     width: 350px;
     border: 5px solid #f9cb00;
     border-radius: 20px;
     box-shadow: 0 0 20px #22a203;
 }
-.JS_Variables_and_constrants{
+.js-variables-and-constrants{
     text-align: center;
 }
 
-.JS_Variables_and_constrants img{
-    height: 350px;
-    width: 350px;
-    border: 5px solid #f9cb00;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #22a203;
-}
-
-.University_Mission_Statment{
-    text-align: center;
-}
-
-.University_Mission_Statment img{
+.js-variables-and-constrants img{
     height: 350px;
     width: 350px;
     border: 5px solid #f9cb00;
@@ -176,12 +163,24 @@ nav a:hover {
     box-shadow: 0 0 20px #22a203;
 }
 
-.computational_thinking{
+.university-mission_-statment{
+    text-align: center;
+}
+
+.university-mission_-statment img{
+    height: 350px;
+    width: 350px;
+    border: 5px solid #f9cb00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #22a203;
+}
+
+.computational-thinking{
     text-align: center;
 
 }
 
-.computational_thinking img{
+.computational-thinking img{
     height: 350px;
     width: 350px;
     border: 5px solid #f9cb00;
