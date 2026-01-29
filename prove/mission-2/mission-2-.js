@@ -9,10 +9,10 @@ function changeTheme() {
   if (current == 'dark') {
     document.body.style.backgroundColor = 'black';
     document.body.style.color = 'white';
-    logo.src = "../../Images/byui_logo_dark_mode.png";
+    logo.src = "../../images/byui-logo-dark-mode.png";
   } else {
     document.body.style.backgroundColor = 'white';
     document.body.style.color = 'black';
-    logo.src = "../../Images/byui-logo-blue.webp";
+    logo.src = "../../images/byui-logo-blue.webp";
   }
 }
