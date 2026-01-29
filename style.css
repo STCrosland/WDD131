@@ -8,7 +8,7 @@ html, body {
 body {
     min-height: 100vh;
     background: url("images/wdd131-background.jpeg") no-repeat center center fixed;
-    background-size: cover;
+    background-size: flex;
     background-color: #000;
 }
 
