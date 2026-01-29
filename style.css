@@ -1,23 +1,26 @@
-
-
+/* ===== GLOBAL RESET + iOS FIX ===== */
 html, body {
-    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #000;
 }
 
-/* ===== Background Fix ===== */
+/* ===== BODY BACKGROUND (iOS SAFE) ===== */
 body {
-    min-height: 100vh;
-    background: url("images/wdd131-background.jpeg") no-repeat center center ;
+    min-height: 100vh;     /* fallback */
+    min-height: 100dvh;    /* iOS Safari fix */
+    background: url("images/wdd131-background.jpeg") no-repeat center center;
     background-size: cover;
     background-color: #000;
-    max-width: 700px;
-    max-height: cover;
+    overflow-x: hidden;
 }
 
 /*=== Fonts ===*/
 p {
     color: #fff;
-    text-shadow: #670065;
+    text-shadow: 0px 0px 5px #670065;
 }
 
 /* === Header === */
@@ -27,9 +30,7 @@ header {
     height: 178px;
     display: flex;
     align-items: center;
- 
 }
-
 
 header img {
     display: block;
@@ -45,7 +46,6 @@ nav {
     background: #c800ff;
     width: 100%;
     display: flex;
-    justify-content: left;
     align-items: center;
     gap: 50px;
     height: 50px;
@@ -53,16 +53,12 @@ nav {
     border-bottom: 3px solid #00d0f9;
     padding: 0 20px;
     box-sizing: border-box;
-
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.5em;
-    display: block;
-    align-items: center;
-    justify-content: center;
     padding: 10px 25px;
     text-shadow: 0px 0px 3px #22a203;
     transition: background 0.3s ease, text-shadow 0.3s ease;
@@ -74,7 +70,7 @@ nav a:hover {
     text-shadow: 4px 4px 2px #c800ff;
 }
 
-/* === Menue Button === */
+/* === MENU BUTTON === */
 .menu-btn { 
     cursor: pointer; 
     border: none; 
@@ -89,20 +85,18 @@ nav a:hover {
 }
 
 .change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
+    transform: translate(0, 11px) rotate(-45deg);
 }
-.change .bar2 {opacity: 0;}
-
+.change .bar2 {
+    opacity: 0;
+}
 .change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
+    transform: translate(0, -11px) rotate(45deg);
 }
-          
 
-/* === Home Page === */
+/* === HOME PAGE === */
 .Welcome_Message > h1 {
     color: #fff;
-    grid-column: 1 / -1;
-    justify-self: center;
     text-align: center;
 }
 
@@ -119,19 +113,18 @@ nav a:hover {
 
 .Featured_Projects > h2 {
     color: #fff;
-    grid-column: 1 / -1;
     text-align: center;
 }
 
 .Featured_Projects img {
-    height: 350px;
     width: 350px;
+    height: 350px;
     border: 5px solid #f9cb00;
     border-radius: 20px;
     box-shadow: 0 0 20px #ffffff;
 }
 
-/* === Ponder Page === */
+/* === PONDER PAGE === */
 .ponder-projects {
     width: 90%;
     max-width: 1400px;
@@ -143,7 +136,6 @@ nav a:hover {
 }
 
 .ponder-projects > * {
-    width: 100%;
     max-width: 350px;
     text-align: center;
 }
@@ -152,21 +144,15 @@ nav a:hover {
     color: #f9cb00;
 }
 
-.ponder-welcome > h1 {
-    grid-column: 1 / -1;
-    justify-self: center;
-    text-align: center;
-}
-
 .ponder-projects img {
-    height: 350px;
     width: 350px;
+    height: 350px;
     border: 5px solid #f9cb00;
     border-radius: 20px;
     box-shadow: 0 0 20px #ffffff;
 }
 
-/* === Prove Page === */
+/* === PROVE PAGE === */
 .prove-projects {
     width: 90%;
     max-width: 1400px;
@@ -178,7 +164,6 @@ nav a:hover {
 }
 
 .prove-projects > * {
-    width: 100%;
     max-width: 350px;
     text-align: center;
 }
@@ -187,22 +172,17 @@ nav a:hover {
     color: #f9cb00;
 }
 
-.prove-welcome > h1 {
-    grid-column: 1 / -1;
-    justify-self: center;
-    text-align: center;
-}
-
 .prove-projects img {
-    height: 350px;
     width: 350px;
+    height: 350px;
     border: 5px solid #f9cb00;
     border-radius: 20px;
     box-shadow: 0 0 20px #ffffff;
 }
+
 /* === FOOTER === */
 footer {
-    margin: 20px auto 0;
+    margin: 40px auto 20px;
     width: 90%;
     max-width: 900px;
     text-align: center;
@@ -214,31 +194,19 @@ footer {
     text-shadow: 1px 1px 3px #330033;
 }
 
-/* ===== Tablet ===== */
+/* ===== TABLET ===== */
 @media screen and (min-width: 700px) {
-    .Featured_Projects {
+    .Featured_Projects,
+    .ponder-projects,
+    .prove-projects {
         grid-template-columns: 1fr 1fr;
-    }
-    .ponder-projects {
-        grid-template-columns: 1fr 1fr;
-    }
-     .prove-projects {
-        grid-template-columns: 1fr 1fr;
-    }
-    body{
-        max-width: none;
     }
 }
 
-/* ===== Desktop ===== */
+/* ===== DESKTOP ===== */
 @media screen and (min-width: 1000px) {
-    .Featured_Projects {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .ponder-projects {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
+    .Featured_Projects,
+    .ponder-projects,
     .prove-projects {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -246,12 +214,12 @@ footer {
     .menu-btn {
         display: none;
     }
- 
+
     nav {
-            justify-content: center;   
+        justify-content: center;
     }
 
     nav a {
-        display: flex;        
+        display: flex;
     }
 }
