@@ -22,11 +22,11 @@ p {
 /* === Header === */
 header {
     background: url("images/header-image.jpg") no-repeat center;
-    background-size: 100% 260px;
+    background-size: cover;
     height: 178px;
     display: flex;
     align-items: center;
- 
+    margin: 0;
 }
 
 
@@ -42,7 +42,7 @@ header img {
 /* === Navigation === */
 nav {
     background: #c800ff;
-    width: 100%;
+    width: cover;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -98,7 +98,7 @@ nav a:hover {
           
 
 /* === Home Page === */
-.Welcome_Message > h1 {
+.welcome-message > h1 {
     color: #fff;
     grid-column: 1 / -1;
     justify-self: center;
@@ -106,7 +106,7 @@ nav a:hover {
 }
 
 /* ===== FEATURED PROJECTS ===== */
-.Featured_Projects {
+.featured-projects {
     width: 90%;
     max-width: 1400px;
     margin: 40px auto;
@@ -116,13 +116,13 @@ nav a:hover {
     gap: 40px;
 }
 
-.Featured_Projects > h2 {
+.featured-projects > h2 {
     color: #fff;
     grid-column: 1 / -1;
     text-align: center;
 }
 
-.Featured_Projects img {
+.featured-projects img {
     height: 350px;
     width: 350px;
     border: 5px solid #f9cb00;
@@ -215,7 +215,7 @@ footer {
 
 /* ===== Tablet ===== */
 @media screen and (min-width: 700px) {
-    .Featured_Projects {
+    .featured-projects {
         grid-template-columns: 1fr 1fr;
     }
     .ponder-projects {
@@ -235,7 +235,7 @@ footer {
 
 /* ===== Desktop ===== */
 @media screen and (min-width: 1000px) {
-    .Featured_Projects {
+    .featured-projects {
         grid-template-columns: 1fr 1fr 1fr;
     }
     .ponder-projects {
