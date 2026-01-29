@@ -164,6 +164,40 @@ nav a:hover {
     box-shadow: 0 0 20px #ffffff;
 }
 
+/* === Prove Page === */
+.prove-projects {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+}
+
+.prove-projects > * {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.prove-projects p {
+    color: #f9cb00;
+}
+
+.prove-welcome > h1 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+}
+
+.prove-projects img {
+    height: 350px;
+    width: 350px;
+    border: 5px solid #f9cb00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffffff;
+}
 /* === FOOTER === */
 footer {
     margin: 20px auto 0;
@@ -186,6 +220,9 @@ footer {
     .ponder-projects {
         grid-template-columns: 1fr 1fr;
     }
+     .prove-projects {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* ===== Desktop ===== */
@@ -194,6 +231,10 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
     }
     .ponder-projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .prove-projects {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
