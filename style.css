@@ -10,8 +10,7 @@ body {
     background: url("images/wdd131-background.jpeg") no-repeat center center fixed;
     background-size: cover;
     background-color: #000;
-    max-width: 700px;
-
+    max-height: 700px;
 }
 
 /*=== Fonts ===*/
