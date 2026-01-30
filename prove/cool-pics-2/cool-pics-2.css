@@ -47,7 +47,8 @@ main h2 {
 }
 
 /* ===== Image Grid ===== */
-#cool-pics {
+
+.gallery {
   display: grid;
   grid-template-columns: 1fr; 
   gap: 1.5rem;
@@ -57,7 +58,7 @@ main h2 {
   justify-items: center;
 }
 
-#cool-pics img {
+.gallery img {
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -77,12 +78,48 @@ footer p{
   color: #fff;
 }
 
+/* ===== Modal Viewer ===== */
+dialog {
+  position: relative;        /* anchor for absolute positioning */
+  padding: 1rem;
+  border: none;
+  background: transparent;
+}
+
+/* Image inside modal */
+dialog img {
+  max-width: 80vw;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Close button (X) */
+.close-viewer {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+
+  width: 32px;
+  height: 32px;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
 /* ===== Tablet ===== */
 /*If using chrome on a macbook switch to safari or else the mobile verison is not vieable, 
 Google said the rendering rate is larger with chrome so I cant see it as the mobile verion
 on my laptop. */
 @media screen and (min-width: 700px) {
-  #cool-pics {
+  .gallery {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
@@ -90,7 +127,7 @@ on my laptop. */
 
 /* ===== Desktop ===== */
 @media screen and (min-width: 1000px) {
-  #cool-pics {
+  .gallery {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
