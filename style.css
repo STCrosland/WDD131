@@ -1,5 +1,3 @@
-
-
 html, body {
     height: 100%;
 }
@@ -29,7 +27,6 @@ header {
     margin: 0;
 }
 
-
 header img {
     display: block;
     width: 90px;
@@ -42,7 +39,7 @@ header img {
 /* === Navigation === */
 nav {
     background: #c800ff;
-    width: cover;
+    width: 100%;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -52,20 +49,21 @@ nav {
     border-bottom: 3px solid #00d0f9;
     padding: 0 20px;
     box-sizing: border-box;
-
 }
 
+/* CLEAN nav link styles (no duplicates) */
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.5em;
+
     display: block;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 25px;
+    padding: 20px;
+    text-align: center;
+
+    border-top: 1px solid grey;
     text-shadow: 0px 0px 3px #22a203;
     transition: background 0.3s ease, text-shadow 0.3s ease;
-    display: none;
 }
 
 nav a:hover {
@@ -73,7 +71,7 @@ nav a:hover {
     text-shadow: 4px 4px 2px #c800ff;
 }
 
-/* === Menue Button === */
+/* === Menu Button === */
 .menu-btn { 
     cursor: pointer; 
     border: none; 
@@ -90,12 +88,40 @@ nav a:hover {
 .change .bar1 {
   transform: translate(0, 11px) rotate(-45deg);
 }
-.change .bar2 {opacity: 0;}
-
+.change .bar2 { opacity: 0; }
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
 }
-          
+
+/* === MOBILE MENU RULES (UNDER 700px) ==== */
+@media screen and (max-width: 699px) {
+
+    /* Show hamburger on mobile */
+    .menu-btn {
+        display: inline-block;
+    }
+
+    /* Make the nav a dropdown container on mobile */
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        gap: 0;
+        padding: 0;
+    }
+
+    /* Hide links by default on mobile */
+    nav a {
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Show links when JS toggles nav.open */
+    nav.open a {
+        display: block;
+    }
+}
 
 /* === Home Page === */
 .welcome-message > h1 {
@@ -199,6 +225,7 @@ nav a:hover {
     border-radius: 20px;
     box-shadow: 0 0 20px #ffffff;
 }
+
 /* === FOOTER === */
 footer {
     margin: 20px auto 0;
@@ -221,15 +248,34 @@ footer {
     .ponder-projects {
         grid-template-columns: 1fr 1fr;
     }
-     .prove-projects {
+    .prove-projects {
         grid-template-columns: 1fr 1fr;
     }
-    body{
+
+    body {
         max-width: none;
     }
-    header img{
+
+    header img {
         width: 150px;
         height: 168px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        height: 50px;
+        padding: 0 20px;
+        gap: 50px;
+    }
+
+    nav a {
+        display: inline-block;
+        border-top: none;
+        padding: 10px 25px;
     }
 }
 
@@ -241,20 +287,11 @@ footer {
     .ponder-projects {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
     .prove-projects {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .menu-btn {
-        display: none;
-    }
- 
     nav {
-            justify-content: center;   
-    }
-
-    nav a {
-        display: flex;        
+        justify-content: center;
     }
 }
