@@ -27,14 +27,22 @@ nav {
 }
 
 nav a {
-  display: none;
   padding: 1rem;
   color: rgb(0, 0, 0);
   text-decoration: none;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid gray;
 }
 
 nav a:hover {
   color: #0011f8;
+}
+
+.hide{
+  display: none;
+
 }
 
 /* ===== Main ===== */
@@ -88,8 +96,8 @@ dialog {
 
 /* Image inside modal */
 dialog img {
-  max-width: 80vw;
-  max-height: 80vh;
+  max-width: 70vw;
+  max-height: 70vh;
   display: block;
   margin: 0 auto;
 }
