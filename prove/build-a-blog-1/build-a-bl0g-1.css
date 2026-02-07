@@ -1,0 +1,169 @@
+/* === RESET + SAFETY === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === SKIP LINK === */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 1000;
+}
+
+/* === PAGE CONTAINER === */
+.page {
+  width: calc(100% - 1rem);   
+  max-width: 900px;
+  margin: 0.5rem auto;
+  border: 2px solid #333;     
+  background: #fff;
+}
+
+/* === HEADER === */
+.header {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 2px solid #d9b98f;
+}
+
+.header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header nav {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 2px solid #d9b98f;
+  display: flex;
+  justify-content: right;
+  gap: 1.5rem;
+}
+
+.header nav a {
+  color: #9b2b2b;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* === MAIN GRID — MOBILE === */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  grid-template-areas:
+    ". meta"
+    "post post";
+  gap: 0.75rem 1rem;
+  padding: 1rem;
+  border-bottom: 2px solid #d9b98f;
+}
+
+/* === META === */
+.meta {
+  grid-area: meta;
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.meta p {
+  margin: 0 0 0.6rem;
+}
+
+.stars {
+  color: #d6b45a;
+  letter-spacing: 2px;
+}
+
+/* === POST === */
+.post {
+  grid-area: post;
+  text-align: center;
+}
+
+.post h2 {
+  margin: 0.25rem 0 0.75rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #9b2b2b;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.post img {
+  width: 240px;
+  margin: 0.5rem auto 0.75rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* === DESKTOP === */
+@media (min-width: 800px) {
+
+  .page {
+    width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  .header nav {
+    justify-content: flex-end;
+  }
+
+  .content-grid {
+    grid-template-columns: 180px 1fr;
+    grid-template-areas: "meta post";
+    gap: 2rem;
+  }
+
+  .meta {
+    border-right: 2px solid #d9b98f;
+    padding-right: 1rem;
+  }
+
+  .post {
+    padding-left: 1rem;
+  }
+
+  .post img {
+    width: 260px;
+  }
+}
