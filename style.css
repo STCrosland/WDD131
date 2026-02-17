@@ -225,6 +225,40 @@ nav a:hover {
     border-radius: 20px;
     box-shadow: 0 0 20px #ffffff;
 }
+/*=== PREPARE ===*/
+.prepare-readings {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+}
+
+.prepare-readings > * {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.prepare-readings p {
+    color: #f9cb00;
+}
+
+.prepare-welcome > h1 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+}
+
+.prepare-readings img {
+    height: 350px;
+    width: 350px;
+    border: 5px solid #f9cb00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffffff;
+}
 
 /* === FOOTER === */
 footer {
@@ -240,6 +274,14 @@ footer {
     text-shadow: 1px 1px 3px #330033;
 }
 
+footer img {
+    height: 20%;
+    width: 20%;
+    border: 5px solid #f9cb00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffffff;
+}
+
 /* ===== Tablet ===== */
 @media screen and (min-width: 700px) {
     .featured-projects {
@@ -252,6 +294,10 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
+     .prepare-readings {
+        grid-template-columns: 1fr 1fr;
+    }
+    
     body {
         max-width: none;
     }
@@ -288,6 +334,10 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
     }
     .prove-projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+     .prepare-readings {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
