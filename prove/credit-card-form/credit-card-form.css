@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+.page {
+  padding: 24px;
+}
+
+.errors {
+  color: #b00020;
+  white-space: pre-line;
+  min-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+.form-grid {
+  position: relative;
+  width: 520px;
+  height: 270px;
+}
+
+.card-front {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 330px;
+  height: 170px;
+  padding: 16px 16px 12px;
+  background: #d4d4d4;
+  border-radius: 8px;
+  box-shadow: 0 10px 14px rgba(0,0,0,.25);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "total icon"
+    "number number"
+    "name exp";
+  gap: 10px;
+  z-index: 3;
+}
+
+.total {
+  grid-area: total;
+  margin: 0;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.icon {
+  grid-area: icon;
+  justify-self: end;
+  font-size: 18px;
+}
+
+.field.number { grid-area: number; }
+.field.name { grid-area: name; }
+.field.expiration { grid-area: exp; }
+
+label {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 70%;
+  padding: 6px 7px;
+  border: 1px solid #9a9a9a;
+  border-radius: 3px;
+  background: #f7f7f7;
+  font-size: 11px;
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 42px 42px;
+  gap: 10px;
+}
+
+.card-back {
+  position: absolute;
+  left: 90px;
+  top: 70px;
+  width: 330px;
+  height: 170px;
+  background: #cfcfcf;
+  border-radius: 8px;
+  box-shadow: 0 10px 14px rgba(0,0,0,.25);
+  padding: 14px;
+  z-index: 1;
+}
+
+.mag-strip {
+  height: 40px;
+  background: #111;
+  border-radius: 3px;
+
+  width: calc(100% + 28px);
+  margin-left: -14px;
+}
+
+.field.cvc {
+  position: absolute;
+  right: 14px;
+  top: 80px;
+  width: 50px;
+}
+
+.submit-btn {
+  position: absolute;
+  right: 80px;
+  bottom: -50px;
+  padding: 8px 18px;
+  border: 1px solid #222;
+  border-radius: 7px;
+  background: #efefef;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0,0,0,.25);
+  font-size: 12px;
+  z-index: 10;
+}
+
+@media (max-width: 560px) {
+  .form-grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 12px;
+  }
+
+  .card-front,
+  .card-back,
+  .submit-btn {
+    position: static;
+    width: 100%;
+  }
+
+  .card-back {
+    height: auto;
+  }
+
+  .field.cvc {
+    position: static;
+    width: 120px;
+    margin-top: 12px;
+  }
+
+  .submit-btn {
+    justify-self: end;
+  }
+}

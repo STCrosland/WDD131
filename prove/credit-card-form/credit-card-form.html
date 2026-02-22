@@ -1,0 +1,111 @@
+<!-- creditcard/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Credit card checkout form demo using CSS Grid and JavaScript validation." />
+  <meta name="author" content="Stpencer T. Crosland" />
+
+  <title>Credit Card Form</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="images/favicon.ico" />
+
+  <link rel="stylesheet" href="credit-card-form.css" />
+  <script src="credit-card-form.js" defer></script>
+</head>
+
+<body>
+  <main class="page">
+    
+
+    <section class="errors" aria-live="polite"></section>
+
+    <form id="cardForm" class="form-grid" novalidate>
+      <!-- FRONT CARD -->
+      <section class="card-front" aria-label="Card front">
+        <p class="total">TOTAL: $199</p>
+        <div class="icon" aria-hidden="true">💳</div>
+
+        <div class="field number">
+          <label for="cardNumber">CARD NUMBER</label>
+          <input
+            id="cardNumber"
+            name="cardNumber"
+            type="text"
+            placeholder="1234 5678 9101 1020"
+            maxlength="19"
+            inputmode="numeric"
+            autocomplete="cc-number"
+            required
+          />
+        </div>
+
+        <div class="field name">
+          <label for="cardName">CARD HOLDER</label>
+          <input
+            id="cardName"
+            name="cardName"
+            type="text"
+            placeholder="John Doe"
+            autocomplete="cc-name"
+            required
+          />
+        </div>
+
+        <!-- One label represents both month/year (ARIA requirement) -->
+        <div class="field expiration" id="cardExpiration">
+          <label id="expirationDate" for="month">EXPIRATION</label>
+
+          <div class="exp-row">
+            <input
+              type="text"
+              id="month"
+              name="expMonth"
+              placeholder="MM"
+              maxlength="2"
+              inputmode="numeric"
+              aria-labelledby="expirationDate"
+              required
+            />
+            <input
+              type="text"
+              id="year"
+              name="expYear"
+              placeholder="YY"
+              maxlength="2"
+              inputmode="numeric"
+              aria-labelledby="expirationDate"
+              required
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- BACK CARD -->
+      <section class="card-back" aria-label="Card back">
+        <div class="mag-strip" aria-hidden="true"></div>
+
+        <div class="field cvc">
+          <label for="cvc">CVC/CVV</label>
+          <input
+            type="text"
+            id="cvc"
+            name="cvc"
+            placeholder="xxx"
+            maxlength="4"
+            inputmode="numeric"
+            autocomplete="cc-csc"
+            required
+          />
+        </div>
+      </section>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <section id="success" class="success hide" aria-live="polite"></section>
+  </main>
+</body>
+</html>
